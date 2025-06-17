@@ -29,3 +29,8 @@ Este projeto é uma aplicação ASP.NET MVC com autenticação de usuários, des
 - ✔️ Visual Studio 2022 ou superior
 - ✔️ (Opcional) Cliente SQLite para visualizar o banco
 
+## 👨‍💻 Desenvolvedor
+Rafael Arantes da Silva
+📍 Uberlândia - MG
+📧 rafael.imu@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/rafaelarantes365/)
