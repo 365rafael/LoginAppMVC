@@ -1,0 +1,23 @@
+﻿@model LoginAppMVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Excluir Usuário";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-danger">Confirmação de Exclusão</h2>
+
+    <div class="alert alert-warning">
+        <p>Tem certeza que deseja excluir o usuário <strong>@Model.Nome</strong>?</p>
+        <p class="text-danger"><small>Esta ação não pode ser desfeita.</small></p>
+    </div>
+
+    <form method="post" asp-action="ExcluirConfirmed" asp-route-id="@Model.Id">
+        <button type="submit" class="btn btn-danger">
+            <i class="bi bi-trash"></i> Confirmar Exclusão
+        </button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">
+            <i class="bi bi-x-lg"></i> Cancelar
+        </a>
+    </form>
+</div>

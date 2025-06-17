@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Bem-vindo";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="fw-bold mb-4">Bem-vindo ao <span class="text-primary">LoginAppMVC</span></h1>
+        <p class="lead mb-4">
+            Este é um sistema exemplo com autenticação utilizando ASP.NET MVC, C# e Bootstrap 5.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Conta" asp-action="Logout" class="btn btn-danger btn-lg">
+                    <i class="bi bi-box-arrow-right"></i> Sair
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Conta" asp-action="Login" class="btn btn-dark btn-lg">
+                    <i class="bi bi-box-arrow-in-right"></i> Login
+                </a>
+                <a asp-controller="Conta" asp-action="Registrar" class="btn btn-primary btn-lg">
+                    <i class="bi bi-person-plus"></i> Registrar
+                </a>
+            }
+        </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-lock display-4 text-primary"></i>
+                    <h5 class="card-title mt-3">Segurança</h5>
+                    <p class="card-text">Sistema com autenticação segura, proteção por cookies e criptografia de senha.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-speedometer2 display-4 text-success"></i>
+                    <h5 class="card-title mt-3">Performance</h5>
+                    <p class="card-text">Aplicação leve, rápida e construída com boas práticas de desenvolvimento.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-code-slash display-4 text-warning"></i>
+                    <h5 class="card-title mt-3">Tecnologia</h5>
+                    <p class="card-text">Desenvolvido com ASP.NET Core MVC, C#, Bootstrap 5 e Entity Framework.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
